@@ -1,0 +1,34 @@
+<?php 
+$this -> headTitle ('买多多－可以买多多');
+$this->headMeta()->appendHttpEquiv('Content-Type', "text/html; charset=UTF-8")
+                 ->appendHttpEquiv('Content-Language', 'en-US');
+$this->headLink()->appendStylesheet('/css/index/index.css');
+$this->headLink()->appendStylesheet('/css/index/vpannel.css');
+echo $this->doctype() ;
+echo '<html><head>';
+echo $this->headMeta();
+echo $this->headTitle();
+echo $this -> headLink ();
+echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs
+/jquery/1.4.0/jquery.min.js"></script>';
+echo "</head>";
+?>
+<body>
+<?php echo $this -> layout () -> nav ; ?>
+<div id="container">
+	<div class="maincolumn">
+		<div id="index_left_column" class="columnleft mr10">
+			<?php echo $this -> layout () -> leftsider ; ?>
+		</div>
+		<div class="columnright">
+			<?php echo $this -> layout () -> rightsider ; ?>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div id="footer" class="mt10">
+		<?php echo $this -> layout () -> footer;?>
+</div>
+
+</body>
+</html>
